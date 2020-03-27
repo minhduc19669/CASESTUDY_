@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="play();">
+    <img id="1" src="wall-1690402_960_720.png" alt="" width="500" height="500">
+    <div class="container">
+    <div class="canvas"><canvas id="myCanvas" style="border: 10px solid rgba(12, 5, 12, 0.747)" width="500" height="500"></canvas></div>
+    <div class="main">
+        <div class="show">
+            <h3>SCORE:</h3><br>
+            <h3 id="score" style="margin-top: 20px;"></h3>
+        </div>
+        <button type="button" onclick="main()" >Play Game</button>
+        <button type="button" onclick="main();">Change Mode</button>
+        <button type="button" onclick="reloadPage()">Reset Game</button>
+    </div>
+</div>
+<script>
+    document.getElementById('1').style.display='none';
+    function play(){
+        let audio=new Audio("NhacGameSuperMarioFull-VariousArt_3eqzv.mp3")
+        audio.play();
+    }
+    function image(){
+        var img=document.getElementById('1');
+        context.drawImg(img,10,10);
+        document.getElementById('1').style.display='block';
+    }
+</script>
+<script src="bouncingBall.js"></script>
+</body>
+</html>
